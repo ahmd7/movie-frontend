@@ -1,0 +1,10 @@
+version: '3'
+services:
+  front-end:
+    image: vhmds/movie-frontend
+    ports:
+      - "80:3000"
+  back-end:
+    image: vhmds/movie-review
+    ports:
+      - "8000:8000"
