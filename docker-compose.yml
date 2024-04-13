@@ -4,8 +4,6 @@ services:
     image: vhmds/movie-frontend
     ports:
       - "80:3000"
-    enviroment:
-      BACKEND_URL: backend:8080
     depends_on:
       - backend
   backend:
