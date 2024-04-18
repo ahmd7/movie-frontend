@@ -1,13 +1,13 @@
 import './App.css';
 import api from './api/axiosconfig';
 import {useState, useEffect} from 'react';
-import Layout from './componants/Layout';
+import Layout from './components/Layout';
 import {Routes, Route} from 'react-router-dom';
-import Home from './componants/home/Home';
-import Header from './componants/header/Header';
-import Trailer from './componants/trailer/Trailer';
-import Reviews from './componants/reviews/reviews.js';
-import NotFound from './componants/notFound/NotFound.js';
+import Home from './components/home/Home';
+import Header from './components/header/Header';
+import Trailer from './components/trailer/Trailer';
+import Reviews from './components/reviews/Reviews';
+import NotFound from './components/notFound/NotFound';
 
 function App() {
 
