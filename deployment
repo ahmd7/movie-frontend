@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Clone the repository
+echo "Cloning repository..."
+sudo git clone https://github.com/ahmd7/movie-frontend.git
+cd movie-frontend/
+echo "Repository cloned successfully."
+
+# Update system packages
+echo "Updating system packages..."
+sudo apt update -y
+sudo apt-get upgrade -y
+echo "System packages updated."
+
+# Install Node.js and npm
+echo "Installing Node.js and npm..."
+sudo apt install nodejs -y
+sudo apt install npm -y
+echo "Node.js and npm installed successfully."
+
+# Install React scripts globally
+echo "Installing React scripts globally..."
+sudo npm install react-scripts -g
+echo "React scripts installed."
+
+# Build the React application
+echo "Building the React application..."
+sudo npm run build
+echo "React application built successfully."
+
+# Install dependencies
+echo "Installing dependencies..."
+sudo npm install
+echo "Dependencies installed successfully."
+
+# Add content to axiosconfig.js
+echo "Adding content to axiosconfig.js..."
+sudo bash -c 'cat <<EOF > src/api/axiosconfig.js
+import axios from 'axios';
+
+export default axios.create({
+    baseURL:'http://IP:8080',
+    headers: {"ngrok-skip-browser-warning": "true"}
+});
+EOF'
+echo "Content added to axiosconfig.js."
+
+# Start the application
+echo "Starting the application..."
+sudo npm start
+echo "Application started."
