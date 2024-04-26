@@ -18,11 +18,6 @@ sudo apt install nodejs -y
 sudo apt install npm -y
 echo "Node.js and npm installed successfully."
 
-# Install React scripts globally
-echo "Installing React scripts globally..."
-sudo npm install react-scripts -g
-echo "React scripts installed."
-
 # Build the React application
 echo "Building the React application..."
 sudo npm run build
